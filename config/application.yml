@@ -1,0 +1,12 @@
+# DEFAULT APPLICATION CONFIGURATION
+# For examples, see: https://github.com/ykessler/snappconfig#snappconfig
+
+email_0:
+ address: 'smtp.gmail.com'
+ port: 587
+ domain: 'racketlogger.com'
+ user_name: ''
+ password: ''
+ authentication: 'plain'
+ enable_starttls_auto: true
+ delivery_method: 'smtp'
