@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Registration</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+	<link href="assets/prettify.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class='container'>
+		
+		<div class="span12">
+			<section id="wizard">
+			  <div class="page-header">
+	            <h1>Registration</h1>
+	          </div>
+	
+				<div id="rootwizard">
+					<div class="navbar">
+					  <div class="navbar-inner">
+					    <div class="container">
+					<ul>
+					  	<li><a href="#tab1" data-toggle="tab">Contact information</a></li>
+						<li><a href="#tab2" data-toggle="tab">Skill level</a></li>
+						<li><a href="#tab3" data-toggle="tab">Choose facility</a></li>
+						<li><a href="#tab4" data-toggle="tab">Payment</a></li>
+						<li><a href="#tab5" data-toggle="tab">Receipt</a></li>
+					</ul>
+					 </div>
+					  </div>
+					</div>
+					<div id="bar" class="progress progress-striped active">
+					  <div class="bar"></div>
+					</div>
+					<div class="tab-content">
+					    <div class="tab-pane" id="tab1">
+					      <div class="row">
+					      	<div class="center_div container col-lg-6" style="width:40%">
+					      		<center><h3><h3>Contact Information</h3></h3a></center>
+					      		<form role="form">
+					      			<div class="form-group">
+					      				<label for="primary-phone-number">Primary phone number</label>
+					      				<input type="number" class="form-control" id="primary-phone-number">
+					      			</div>
+
+					      			<div class="form-group">
+					      				<label for="last-name">Secondary phone number</label>
+					      				<input type="number" class="form-control" id="secondary-phone-number">
+					      			</div>
+
+					      			<div class="form-group">
+					      				<label for="address">Address</label>
+					      				<input type="text" class="form-control" id="address">
+					      			</div>
+
+					      			<div class="form-group">
+					      				<label for="city">City</label>
+					      				<input type="text" class="form-control" id="city">
+					      			</div>
+					      			<table>
+					      				<tr>
+					      					<td>
+					      						<div class="form-group">
+					      							<label for="state">State</label>
+					      							<input type="text" class="form-control" id="state">
+					      						</div>
+					      					</td>
+					      					<td style="padding-left: 20">
+					      						<div class="form-group">
+					      							<label for="zip-code">Zip Code</label>
+					      							<input type="number" class="form-control" id="zip-code">
+					      						</div>
+					      					</td>
+					      				</tr>
+					      			</table>
+					      			<!-- <button id="submit" type="submit" class="btn btn-primary" style="width:100%">Submit</button> -->
+					      		<!-- </form> -->
+					      	</div>
+					      </div>
+					    </div>
+
+					    <div class="tab-pane" id="tab2">
+					       <center><h3>Your skill level</h3></center>
+                 <p>You are qualified to play at the 4.0 level<br />
+                  This is based on your last season of play - Fall 2014 Men's singles</p>
+					    </div>
+
+						<div class="tab-pane" id="tab3">
+						  <center><h3>Choose your facility</h3></center>
+                <div class="form-group">
+                  <label for="facility-name">Facility name</label>
+                  <input type="text" class="form-control" id="facility-name">
+                </div>  
+                <center><button id="facility" class="btn btn-primary" style="width:20%">Show all facilities</button></center>
+					  </div>
+
+						<div class="tab-pane" id="tab4">
+                <div class="center_div container col-lg-6" style="width:40%">
+                  <center><h3>Billing Address</h3a></center>
+                    <div class="form-group">
+                      <label for="first-name">First Name</label>
+                      <input type="text" class="form-control" id="first-name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="last-name">Last Name</label>
+                      <input type="text" class="form-control" id="last-name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="address">Address</label>
+                      <input type="text" class="form-control" id="address">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="city">City</label>
+                      <input type="text" class="form-control" id="city">
+                    </div>
+                    <table>
+                      <tr>
+                        <td>
+                          <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" id="state">
+                          </div>
+                        </td>
+                        <td style="padding-left: 20">
+                         <div class="form-group">
+                          <label for="zip-code">Zip Code</label>
+                          <input type="number" class="form-control" id="zip-code">
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <center><h4>Payment Info</h4></center>
+                  <button type="button" class="btn btn-primary" style="width:100%"data-toggle="modal" data-target=".bs-example-modal-sm">Apply Coupon Code</button>
+                  <div class="form-group ">
+                    <label for="card-holder-name">Card Holder Name</label>
+                    <input type="text" class="form-control" id="card-holder-name">
+                  </div>
+
+                  <div class="form-group ">
+                    <label for="card-number">Card Number</label>
+                    <input type="number" class="form-control" id="card-number">
+                  </div>
+
+                  <center><h4>Card Expiration</h4></center>
+                  <div class="form-group">
+                    <label for="month">Month(MM)</label>
+                    <input type="number" class="form-control" id="month">
+                  </div>
+                  <div class="form-group">
+                    <label for="year">Year(YYYY)</label>
+                    <input type="number" class="form-control" id="year">
+                  </div>
+                  <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="number" class="form-control" id="cvv">
+                  </div>
+              </div>
+            <center><button id="submit" type="submit" class="btn btn-primary" style="width:40%">Submit</button></center>
+              </form>
+            </div>
+						
+            <!-- Coupon Code Modal -->
+
+            <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="exampleModalLabel">Enter Coupon Code</h4>
+                  </div>
+
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="recipient-name" class="control-label">Coupon Code</label>
+                        <input type="text" class="form-control" id="coupon-code">
+                      </div>
+                    </form>
+                  </div>
+
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Apply</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="tab-pane" id="tab5">
+							<center><h3>Receipt</h3></center>
+					    </div>
+
+						<ul class="pager wizard">
+							<li class="previous first" style="display:none;"><a href="#">First</a></li>
+							<li class="previous"><a href="#">Previous</a></li>
+							<li class="next last" style="display:none;"><a href="#">Last</a></li>
+						  	<li class="next"><a href="#">Next</a></li>
+						</ul>
+					</div>	
+				</div>
+				
+				
+			</section>
+ 		</div>
+	</div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+	<script src="assets/jquery.bootstrap.wizard.js"></script>
+	<script src="assets/prettify.js"></script>
+	<script>
+	jQuery(document).ready(function() {
+	  	jQuery('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+			var $total = navigation.find('li').length;
+			var $current = index+1;
+			var $percent = ($current/$total) * 100;
+			jQuery('#rootwizard').find('.bar').css({width:$percent+'%'});
+		}});	
+		window.prettyPrint && prettyPrint()
+	});	
+	</script>
+    <script>
+
+    $("input[type=text").focusout(function(){
+      validate($(this),validateElement($(this)));
+    });
+
+    $("input[type=number").focusout(function(){
+      validate($(this),isInt($(this).val()));
+    });
+
+    $("#month").focusout(function(){
+      if(validate($(this),isInt($(this).val())) && parseInt($(this).val()) >= 1 && parseInt($(this).val()) <= 12) {
+        validate($(this), true);
+      }
+      else {
+        validate($(this), false);
+      }
+    });
+
+    function isInt(n) { return parseInt(n) == n && parseInt(n)>0; }
+    function validateElement(element)
+    {
+      return ($(element).val().replace(/\s/g, '').replace(";","").length)>0;
+    }
+
+    function validate(element,value)
+    {
+      if(!value){
+        $(element).parent().removeClass('has-success').addClass('has-error');
+        return false;
+      }
+      else {
+        $(element).parent().removeClass('has-error').addClass('has-success');
+        return true;
+      }
+    }
+    $("#submit").click(function(e){
+      $("input").trigger('focusout');
+      if(document.getElementsByClassName('has-error').length > 0 && !$('#coupon-code').parent().hasClass('has-error')) {
+        alert("Please fill in all the fields/Check for the red fields");
+        e.preventDefault();
+      }
+    });
+  </script>
+  </body>
+</html>
