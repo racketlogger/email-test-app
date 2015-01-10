@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+    <!-- Bootstrap -->
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/prettify.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!-- <link rel="stylesheet" href="bulletin.css"> -->
+    <!-- <link rel="stylesheet" href="bootstrap-table.css"> -->
+    <script type="text/javascript">
+      $(document).ready(function(){ 
+        $("#myTab a").click(function(e){
+          e.preventDefault();
+          $(this).tab('show');
+        });
+      });
+    </script>
+    <style type="text/css">
+      .bs-example{
+        margin: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='container'>
+    
+    <div class="span12">
+      <section id="wizard">
+        <div class="page-header">
+              <h1>Profile</h1>
+            </div>
+
+            <div id="rootwizard">
+              <div class="navbar">
+                <div class="navbar-inner">
+                  <div class="container">
+                    <ul>
+                      <li><a href="#tab1" data-toggle="tab">Singles</a></li>
+                      <li><a href="#tab2" data-toggle="tab">Doubles</a></li>
+                      <li><a href="#tab3" data-toggle="tab">Mixed</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+          <div class="tab-content">
+            <div class="tab-pane" id="tab1">
+              <div class="primary-tabs">
+              <ul class="nav nav-pills nav-justified" id="myTab">
+                  <li class="active"><a href="#history">History</a></li>
+                  <li><a href="#schedule">Schedule</a></li>
+                  <li><a href="#division-standings">Division standings</a></li>
+                  <li><a href="#league-standings">League standings</a></li>
+                  <li><a href="#playoff-draw">Playoff draw</a></li>
+                </ul>
+                <div class="tab-content">
+                  
+                <!--history tab -->
+
+                  <div id="history" class="tab-pane fade in active">
+                  
+                    <!-- vertical tabs under history-->
+
+                    <div class="vertical-tabs-history">
+                      <ul class="nav nav-pills nav-stacked" id="myTab" style="width: 30%;">
+                        <li class="active"><a href="#season-history">Season history</a></li>
+                        <li><a href="#match-history">Match history</a></li>
+                      </ul>
+                      <div class="tab-content">
+                        <div id="season-history" class="tab-pane fade in active">
+                          <h3>Regular season</h3>
+                          <br /><br />
+                          <table data-toggle="table" data-cache="false" data-height="500" class="table table-hover" style="margin-top: -41px;margin-bottom: 50px;">
+                            <thead>
+                              <tr><th style=""><div class="">League</div></div></th>
+                                <th style=""><div class="">Division</div></div></th>
+                                <th style=""><div class="">Level</div></th>
+                                <th style=""><div class="">Div. rank</div></th>
+                                <th style=""><div class="">Leau. rank</div></th>
+                                <th style=""><div class="">Points</div></th>
+                                <th style=""><div class="">Win</div></th>
+                                <th style=""><div class="">Loss</div></th>
+                                <th style=""><div class="">Win %</div></th>
+                                <th style=""><div class="">2 sets</div></th>
+                                <th style=""><div class="">3 sets</div></th>
+                                <th style=""><div class="">Tie break</div></th>
+                                <th style=""><div class="">Rating</div></th>
+                                <th style=""><div class="">Playoff draw</div></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr data-index="0"><td style="">12</td><td style="">Sep 20-27</td><td style="">August</td><td style="">jeff</td><td style="">win by def</td><td style="">68</td><td style="">4</td><td style="">3</td><td style="">24%</td><td style="">24%</td><td style="">57%</td><td style="">12%</td><td style="">2.3</td><td style="">1</td></tr>
+                              <tr data-index="0"><td style="">12</td><td style="">Sep 20-27</td><td style="">August</td><td style="">jeff</td><td style="">win by def</td><td style="">68</td><td style="">4</td><td style="">3</td><td style="">24%</td><td style="">24%</td><td style="">57%</td><td style="">12%</td><td style="">2.3</td><td style="">1</td></tr>
+                              <tr data-index="0"><td style="">12</td><td style="">Sep 20-27</td><td style="">August</td><td style="">jeff</td><td style="">win by def</td><td style="">68</td><td style="">4</td><td style="">3</td><td style="">24%</td><td style="">24%</td><td style="">57%</td><td style="">12%</td><td style="">2.3</td><td style="">1</td></tr>
+                              <tr data-index="0"><td style="">12</td><td style="">Sep 20-27</td><td style="">August</td><td style="">jeff</td><td style="">win by def</td><td style="">68</td><td style="">4</td><td style="">3</td><td style="">24%</td><td style="">24%</td><td style="">57%</td><td style="">12%</td><td style="">2.3</td><td style="">1</td></tr>
+                              <tr data-index="0"><td style="">12</td><td style="">Sep 20-27</td><td style="">August</td><td style="">jeff</td><td style="">win by def</td><td style="">68</td><td style="">4</td><td style="">3</td><td style="">24%</td><td style="">24%</td><td style="">57%</td><td style="">12%</td><td style="">2.3</td><td style="">1</td></tr>
+                          
+                            </tbody>
+                          </table>
+                        </div>
+                        <div id="match-history" class="tab-pane fade">
+                          <h3>Match History</h3>
+                          <br /><br />
+                          <table data-toggle="table" data-cache="false" data-height="500" class="table table-hover" style="margin-top: -41px;margin-bottom: 50px;">
+                            <thead>
+                              <tr><th style=""><div class="">League</div></div></th>
+                                <th style=""><div class="">Level</div></div></th>
+                                <th style=""><div class="">Scores</div></th>
+                                <th style=""><div class="">Code</div></th>
+                                <th style=""><div class="">Opponent</div></th>
+                                <th style=""><div class="">Winner</div></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr data-index="0"><td style="">2014 Fall Rnd 1</td><td style="">4.0</td><td style="">4-6,5-7</td><td style=""></td><td style="">Jeff</td><td style="">Jeff</td></tr>
+                              <tr data-index="0"><td style="">2014 Fall Rnd 1</td><td style="">4.0</td><td style="">4-6,5-7</td><td style=""></td><td style="">Jeff</td><td style="">Jeff</td></tr>
+                               <tr data-index="0"><td style="">2014 Fall Rnd 1</td><td style="">4.0</td><td style="">4-6,5-7</td><td style=""></td><td style="">Jeff</td><td style="">Jeff</td></tr>
+                              <tr data-index="0"><td style="">2014 Fall Rnd 1</td><td style="">4.0</td><td style="">4-6,5-7</td><td style=""></td><td style="">Jeff</td><td style="">Jeff</td></tr>
+                              <tr data-index="0"><td style="">2014 Fall Rnd 1</td><td style="">4.0</td><td style="">4-6,5-7</td><td style=""></td><td style="">Jeff</td><td style="">Jeff</td></tr>
+                          
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- schedule tab -->
+
+                  <div id="schedule" class="tab-pane fade">
+                    <h3>Season schedule Fall 2014 Men's Flex Singles 4.0</h3>
+                      <br /><br />
+                      <table data-toggle="table" data-cache="false" data-height="500" class="table table-hover" style="margin-top: -41px;margin-bottom: 50px;">
+                        <thead>
+                          <tr><th style=""><div class="">Week</div></div></th>
+                            <th style=""><div class="">Primary Week</div></div></th>
+                            <th style=""><div class="">Deadline</div></th>
+                            <th style=""><div class="">Opponent</div></th>
+                            <th style=""><div class="">Scores</div></th>
+                            <th style=""><div class="">Facility</div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr data-index="0"><td style="">1</td><td style="">Sep 20-26</td><td style="">Oct 05</td><td style="">Jeff go</td><td style="">win by def</td><td style="">Freemount High School</td></tr>
+                          <tr data-index="0"><td style="">1</td><td style="">Sep 20-26</td><td style="">Oct 05</td><td style="">Jeff go</td><td style="">win by def</td><td style="">Freemount High School</td></tr>
+                          <tr data-index="0"><td style="">1</td><td style="">Sep 20-26</td><td style="">Oct 05</td><td style="">Jeff go</td><td style="">win by def</td><td style="">Freemount High School</td></tr>
+                          <tr data-index="0"><td style="">1</td><td style="">Sep 20-26</td><td style="">Oct 05</td><td style="">Jeff go</td><td style="">win by def</td><td style="">Freemount High School</td></tr>
+                        </tbody>
+                      </table>
+                  </div>
+                
+                   <div id="division-standings" class="tab-pane fade">
+                    <h3>Division standings Fall 2014 Men's Flex Singles 4.0</h3>
+                      <br /><br />
+                      <table data-toggle="table" data-cache="false" data-height="500" class="table table-hover" style="margin-top: -41px;margin-bottom: 50px;">
+                        <thead>
+                          <tr><th style=""><div class="">Name</div></div></th>
+                            <th style=""><div class="">Wk 1</div></div></th>
+                            <th style=""><div class="">Wk 2</div></th>
+                            <th style=""><div class="">Wk 3</div></th>
+                            <th style=""><div class="">Points</div></th>
+                            <th style=""><div class="">Rating</div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr data-index="0"><td style="">Jeff</td><td style="">14</td><td style="">14</td><td style="">12A</td><td style="">82</td><td style="">11.2</td></tr>
+                          <tr data-index="0"><td style="">Jeff</td><td style="">14</td><td style="">14</td><td style="">12A</td><td style="">82</td><td style="">11.2</td></tr>
+                          <tr data-index="0"><td style="">Jeff</td><td style="">14</td><td style="">14</td><td style="">12A</td><td style="">82</td><td style="">11.2</td></tr>
+                          <tr data-index="0"><td style="">Jeff</td><td style="">14</td><td style="">14</td><td style="">12A</td><td style="">82</td><td style="">11.2</td></tr>
+                        </tbody>
+                      </table>
+                  </div>
+
+                  <div id="league-standings" class="tab-pane fade">
+                    <h3>San Fransico Bay Area Fall 2014 Men's Flex Singles 4.0</h3>
+                      <br /><br />
+                      <table data-toggle="table" data-cache="false" data-height="500" class="table table-hover" style="margin-top: -41px;margin-bottom: 50px;">
+                        <thead>
+                          <tr><th style=""><div class="">Rank</div></div></th>
+                            <th style=""><div class="">Name</div></div></th>
+                            <th style=""><div class="">Div Rank</div></th>
+                            <th style=""><div class="">Points</div></th>
+                            <th style=""><div class="">Rating</div></th>
+                            <th style=""><div class="">Division</div></th>
+                            <th style=""><div class="">Matches</div></th>
+                            <th style=""><div class="">Available</div></th>
+                            <th style=""><div class="">First season</div></th>
+                            <th style=""><div class="">Playoff eligible</div></th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr data-index="0"><td style="">1</td><td style="">Wing To</td><td style="">1</td><td style="">34</td><td style="">96</td><td style="">9.29</td><td style="">54612</td><td style="">7</td><td style="">Yes</td><td style="">Yes</td><td style="">No</td></tr>
+                          <tr data-index="0"><td style="">1</td><td style="">Wing To</td><td style="">1</td><td style="">34</td><td style="">96</td><td style="">9.29</td><td style="">54612</td><td style="">7</td><td style="">Yes</td><td style="">Yes</td><td style="">No</td></tr>
+                          <tr data-index="0"><td style="">1</td><td style="">Wing To</td><td style="">1</td><td style="">34</td><td style="">96</td><td style="">9.29</td><td style="">54612</td><td style="">7</td><td style="">Yes</td><td style="">Yes</td><td style="">No</td></tr>
+                          <tr data-index="0"><td style="">1</td><td style="">Wing To</td><td style="">1</td><td style="">34</td><td style="">96</td><td style="">9.29</td><td style="">54612</td><td style="">7</td><td style="">Yes</td><td style="">Yes</td><td style="">No</td></tr>
+                        </tbody>
+                      </table>
+                  </div>
+
+                  <div id="playoff-draw" class="tab-pane fade">
+                    <h3>Draw</h3>
+                      <br /><br />
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+
+            <div class="tab-pane" id="tab2">
+            </div>
+
+            <div class="tab-pane" id="tab3">
+            </div>
+     
+          </div>  
+        </div>
+        
+        
+      </section>
+    </div>
+  </div>
+    <script src="assets/bootstrap.min.js"></script>
+  <script src="assets/jquery.bootstrap.wizard.js"></script>
+  <script src="assets/prettify.js"></script>
+  <script>
+  jQuery(document).ready(function() {
+      jQuery('#rootwizard').bootstrapWizard({onTabShow: function(tab, navigation, index) {
+      var $total = navigation.find('li').length;
+      var $current = index+1;
+      var $percent = ($current/$total) * 100;
+      jQuery('#rootwizard').find('.bar').css({width:$percent+'%'});
+    }});  
+    window.prettyPrint && prettyPrint()
+  }); 
+  </script>
+    <script>
+
+    $("input[type=text").focusout(function(){
+      validate($(this),validateElement($(this)));
+    });
+
+    $("input[type=number").focusout(function(){
+      validate($(this),isInt($(this).val()));
+    });
+
+    $("#month").focusout(function(){
+      if(validate($(this),isInt($(this).val())) && parseInt($(this).val()) >= 1 && parseInt($(this).val()) <= 12) {
+        validate($(this), true);
+      }
+      else {
+        validate($(this), false);
+      }
+    });
+
+    function isInt(n) { return parseInt(n) == n && parseInt(n)>0; }
+    function validateElement(element)
+    {
+      return ($(element).val().replace(/\s/g, '').replace(";","").length)>0;
+    }
+
+    function validate(element,value)
+    {
+      if(!value){
+        $(element).parent().removeClass('has-success').addClass('has-error');
+        return false;
+      }
+      else {
+        $(element).parent().removeClass('has-error').addClass('has-success');
+        return true;
+      }
+    }
+    $("#submit").click(function(e){
+      $("input").trigger('focusout');
+      if(document.getElementsByClassName('has-error').length > 0 && !$('#coupon-code').parent().hasClass('has-error')) {
+        alert("Please fill in all the fields/Check for the red fields");
+        e.preventDefault();
+      }
+    });
+  </script>
+  </body>
+</html>
