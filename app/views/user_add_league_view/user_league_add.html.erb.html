@@ -1,0 +1,158 @@
+<html>
+  <head>
+
+    <title>Payment Details</title>
+
+    <style type="text/css">
+
+    .center_div {
+        position: absolute;
+        font-family: sans-serif;
+        top: 40%;
+        left: 30%;
+        right: 10%;
+        margin-top: 100px;
+        margin-left: -50px;
+        width: 600px;
+        height: 850px;
+        }
+
+    </style>
+     <!-- TODO #remove from main document (if bootstrap already available) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+     <link rel="stylesheet" href="bootstrap-select.css">
+
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- datepicker css -->
+    <link rel="stylesheet" href="assets/datepicker.css">
+    <link rel="stylesheet" href="assets/datepicker3.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
+    <script src="assets/bootstrap-select.js"></script>
+
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+    <script src="assets/locationpicker.jquery.min.js"></script>
+    <script src="assets/prettify.js"></script>
+    <script src="assets/bootstrap-datepicker.js"></script>
+    <link href="assets/prettify.css" rel="stylesheet">
+
+  </head>
+  <body>
+      <div class="row">
+
+        <div class=" center_div container col-lg-6" style="width:40%">
+        <center><h3>Create new league</h3></center>
+        <form role="form">
+          <div class="form-group">
+            <label for="first-name">League Name</label>
+            <input type="text" class="form-control" id="league-name" placeholder="enter name here">
+          </div>
+
+          <div class="form-group">
+            <label for="first-name">Level</label><br />
+            <select  data-remote="true" data-url="" data-method="put" class="selectpicker" name="" id=""><option value="">Select your play level</option>
+              <option value="2.0">2.0 - Beginner</option>
+              <option value="2.5">2.5 - Beginner/Intermediate</option>
+              <option value="3.0">3.0 - Intermediate</option>
+              <option value="3.5">3.5 - Intermediate/Advanced</option>
+              <option value="4.0">4.0 - Competitive</option>
+              <option value="4.5">4.5 - Competitive/Advanced</option>
+              <option value="5.0">5.0 - Advanced</option>
+              <option value="5.5">5.5 - Advanced/Expert</option>
+              <option value="6.0">6.0 - Semi-Pro</option>
+              <option value="6.5">6.5 - Semi-Pro/Tour</option>
+            </select>
+          </div>
+
+            <label for="state">Location</label> 
+            <input type="text" class="form-control" id="address" placeholder="Enter a location" autocomplete="off">
+            <br />
+            <div id="map-selector" style="width: 500px; height: 400px;"></div>
+            <br />
+
+            <table>
+                <tr>
+                  <td>
+                    <div class="form-group">
+                      <label for="state">Longitude</label>
+                      <input type="text" class="form-control" id="lon">
+                    </div>
+                  </td>
+                  <td style="padding-left: 20">
+                   <div class="form-group">
+                    <label for="zip-code">Latitude</label>
+                    <input type="text" class="form-control" id="lat"> 
+                  </div>
+                </td>
+              </tr>
+            </table>
+
+          <div class="input-daterange input-group form-group" id="datepicker">
+           <table style="width:500px">
+             <label for="date-range">Date</label>
+             <tr>
+              <td>
+                <input type="text" data-provide="datepicker" class="form-control" name="start" placeholder="start date">
+              </td>
+              &nbsp;
+              <td>
+                <h4>&nbsp;&nbsp;to</h4>
+              </td>
+              <td>
+                <input type="text" data-provide="datepicker" class="form-control" name="end" placeholder="end date" >
+              </td>
+            </tr>
+           </div>  
+          </table>
+          <br/ >
+
+          <div class="form-group">
+            <label for="first-name">Deadline</label>
+            <input type="text" class="form-control" id="deadline" data-provide="datepicker" placeholder="dd/mm/yyyy">
+          </div>
+  
+          <br />  <br />
+
+          <button id="submit" type="submit" class="btn btn-primary" style="width:500px">Submit</button>
+        </form>
+      </div>
+
+  </body>
+
+  <script>
+    
+    $('#map-selector').locationpicker({
+    location: {latitude: 40.7324319, longitude: -73.82480799999996},
+    locationName: "",
+    radius: 500,
+    zoom: 15,
+    scrollwheel: true,
+    inputBinding: {
+        latitudeInput: $('#lat'),
+        longitudeInput: $('#lon'),
+        locationNameInput: $('#address')
+    },
+    enableReverseGeocode: true,
+    enableAutocomplete: true
+});
+
+    $('#sandbox-container .input-daterange').datepicker({
+      calendarWeeks: true,
+      autoclose: true,
+      todayHighlight: true
+});
+
+    $('.selectpicker').selectpicker({});
+  </script>
+
+</html>
