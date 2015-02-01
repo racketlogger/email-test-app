@@ -16,6 +16,23 @@ class UserEmail < ActionMailer::Base
     mail to: email_address, subject: "Reset your RacketLogger password"
   end
 
+  def positive_match_score(email_address, player_name, score)
+    #email is being sent to player_1
+    @player_1 = player_name.titleize
+    @score = score
+    @player_2 = "john".titleize
+    attachments.inline['rl-logo.png'] = File.read('app/assets/images/rl-logo.png')
+    mail to: email_address, subject: "Score Report"
+  end
+
+  def negative_match_score(email_address, player_name, score)
+    #email is being sent to player_1
+    @player_1 = player_name.titleize
+    @score = score
+    @player_2 = "john".titleize
+    attachments.inline['rl-logo.png'] = File.read('app/assets/images/rl-logo.png')
+    mail to: email_address, subject: "Score Report"
+  end
 
 end
 
